@@ -7,8 +7,11 @@
     <style type="text/css">
         html,
         body {
-            margin: 0;
+            /* 主体布局大小 */
             height: 100%;
+            width: 100%;
+            /* 主体布局位置 */
+            margin: 0px auto;
         }
 
         canvas {
@@ -90,6 +93,8 @@
         var loader = new THREE.ColladaLoader(loadingManager);
         loader.load('static/model/model.dae', function (collada) {
             elf = collada.scene;
+            console.log(elf);
+
         });
 
         // var loader = new THREE.ColladaLoader();
